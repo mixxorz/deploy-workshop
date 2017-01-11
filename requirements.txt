@@ -2,3 +2,4 @@ django
 django-environ
 gunicorn
 psycopg2
+whitenoise
