@@ -93,3 +93,4 @@ ENV/
 .ropeproject
 
 db.sqlite3
+staticfiles/
