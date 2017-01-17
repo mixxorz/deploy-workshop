@@ -154,7 +154,7 @@ Before we push our app to Heroku, let's first configure those environment variab
 $ heroku config:set SECRET_KEY='something-super-secret' ALLOWED_HOSTS='.herokuapp.com'
 ```
 
-Now we can push our app to Heroku!
+Now we can push our app to Heroku! (I hope you've been commiting your changes!)
 
 ```
 $ git push heroku master
