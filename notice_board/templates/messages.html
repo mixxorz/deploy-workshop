@@ -1,0 +1,28 @@
+{% load humanize staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Notice Board</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{% static "css/messages.css" %}">
+  </head>
+  <body>
+    <div class="c-container-block">
+      <h1>Notice Board</h1>
+      <ul>
+        {% for message in messages %}
+        <li><span>{{ message }}</span><small>{{ message.created_at|naturaltime }}</small></li>
+        {% empty %}
+        <li>No messages</li>
+        {% endfor %}
+      </ul>
+      <form action="" method="POST">
+        {% csrf_token %}
+        <input type="text" name="message" placeholder="Your message"/>
+        <input type="submit" value="Post">
+      </form>
+    </div>
+  </body>
+</html>

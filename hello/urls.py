@@ -16,6 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 
+from notice_board.views import message_view
+
 urlpatterns = [
+    url(r'^$', message_view, name='message'),
     url(r'^admin/', admin.site.urls),
 ]
